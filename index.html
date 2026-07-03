@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>!function(){var t=localStorage.getItem('ea-theme')||( window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);var s=document.createElement('style');s.id='__nt';s.textContent='*,*::before,*::after{transition:none!important}';document.head.appendChild(s);window.addEventListener('load',function(){var e=document.getElementById('__nt');e&&e.parentNode.removeChild(e)})}();</script>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/modo-escuro-claro.css">
+    <link rel="stylesheet" href="CSS/carrossel.css">
+    <link rel="stylesheet" href="CSS/carrinho.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Essências &amp; Aromas | Perfumaria</title>
+</head>
+<body>
+
+    <header>
+        <div class="topbar">
+            <a href="index.html" class="logo"><span>e</span>ssências &amp; aromas</a>
+        </div>
+        <button id="btn-menu-mobile" class="btn-menu-mobile" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="navbar" id="navbar-menu">
+            <ul>
+                <li><a href="index.html" class="nav-ativo">Home</a></li>
+                <li><a href="HTML/sobre.html">Sobre Nós</a></li>
+                <li><a href="HTML/produtos.html">Produtos</a></li>
+                <li><a href="HTML/portfolio.html">Portefólio</a></li>
+                <li><a href="HTML/contactos.html">Contactos</a></li>
+            </ul>
+            <div class="carrinho-menu">
+                <button id="btn-carrinho-topo">🛒<span id="contador-carrinho">0</span></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO CARROSSEL -->
+        <section class="carrossel hero-carrossel" aria-label="Carrossel de destaques">
+
+            <!-- Slide 1 -->
+                <div class="carrossel-slide ativo">
+                <div class="slide-bg" style="background-image: url('Media/Fundo.jpg');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-conteudo">
+                    <h1>Elegância Aromática</h1>
+                    <p>Descubra fragrâncias que contam a sua história</p>
+                    <a href="HTML/produtos.html" class="btn-primario">Ver Coleção</a>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carrossel-slide">
+                <div class="slide-bg" style="background-image: url('Media/P31.jpg');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-conteudo">
+                    <h1>O Charme do Honeymoon</h1>
+                    <p>Delicado, floral e inconfundível — para momentos que ficam na memória</p>
+                    <a href="HTML/portfolio.html" class="btn-primario">Ver Portefólio</a>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carrossel-slide">
+                <div class="slide-bg" style="background-image: url('Media/P33.jpg');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-conteudo">
+                    <h1>As Fragrâncias do Momento</h1>
+                    <p>As escolhas mais procuradas — para quem define o próprio estilo</p>
+                    <a href="HTML/portfolio.html" class="btn-primario">Ver Tendências</a>
+                </div>
+            </div>
+
+            <!-- Controlos -->
+            <button class="carrossel-prev" aria-label="Slide anterior">&#8249;</button>
+            <button class="carrossel-next" aria-label="Próximo slide">&#8250;</button>
+            <div class="carrossel-dots" aria-hidden="true"></div>
+
+        </section>
+
+        <!-- SOBRE (resumido) -->
+        <section class="sobre">
+            <div class="sobre-texto">
+                <span class="secao-label">Quem somos</span>
+                <h2>Uma paixão por fragrâncias únicas</h2>
+                <p>Na Essências &amp; Aromas acreditamos que um perfume é muito mais do que um aroma — é uma memória, uma emoção, uma identidade. Selecionamos as mais exclusivas fragrâncias do mundo para si.</p>
+                <a href="HTML/sobre.html" class="btn-contorno">Saber Mais</a>
+            </div>
+            <div class="sobre-imagem">
+                <img src="Media/Fundo.jpg" alt="Fragrâncias exclusivas">
+            </div>
+        </section>
+
+        <!-- PRODUTOS (resumido — 4) -->
+        <section class="secao-wrapper">
+            <div class="secao-cabecalho">
+                <span class="secao-label">Destaques</span>
+                <h2>Produtos em Destaque</h2>
+                <p class="secao-desc">Uma seleção das fragrâncias mais procuradas pelos nossos clientes</p>
+            </div>
+            <div class="Produtos">
+                <div class="produto">
+                    <div class="produto-image"><img src="Media/P1.jpg" alt="Bentley"></div>
+                    <div class="produto-info"><h2>Bentley</h2><p>20.000,00 Kz</p></div>
+                </div>
+                <div class="produto">
+                    <div class="produto-image"><img src="Media/P4.jpg" alt="Chanel"></div>
+                    <div class="produto-info"><h2>Chanel</h2><p>25.000,00 Kz</p></div>
+                </div>
+                <div class="produto">
+                    <div class="produto-image"><img src="Media/P5.jpg" alt="Tom Ford"></div>
+                    <div class="produto-info"><h2>Tom Ford</h2><p>35.000,00 Kz</p></div>
+                </div>
+                <div class="produto">
+                    <div class="produto-image"><img src="Media/P8.jpg" alt="Elie Saab"></div>
+                    <div class="produto-info"><h2>Elie Saab</h2><p>20.000,00 Kz</p></div>
+                </div>
+            </div>
+            <div class="ver-mais-wrapper">
+                <a href="HTML/produtos.html" class="btn-primario">Ver Todos os Produtos</a>
+            </div>
+        </section>
+
+        <!-- CATEGORIAS -->
+        <section class="categorias">
+            <div class="secao-cabecalho">
+                <span class="secao-label">Coleções</span>
+                <h2>Encontre a Sua Fragrância</h2>
+            </div>
+            <div class="categorias-grid">
+                <div class="categoria-card categoria-feminino">
+                    <div class="categoria-overlay">
+                        <div class="produto-image"><img src="Media/P9.jpg" alt="Feminino"></div>
+                        <h3>Feminino</h3>
+                        <p>Delicadas, florais e marcantes</p>
+                        <a href="HTML/produtos.html" class="btn-categoria">Ver Coleção</a>
+                    </div>
+                </div>
+                <div class="categoria-card categoria-masculino">
+                    <div class="categoria-overlay">
+                        <div class="produto-image"><img src="Media/Masculino.jpg" alt="Masculino"></div>
+                        <h3>Masculino</h3>
+                        <p>Intensos, amadeirados e sofisticados</p>
+                        <a href="HTML/produtos.html" class="btn-categoria">Ver Coleção</a>
+                    </div>
+                </div>
+                <div class="categoria-card categoria-tendencia">
+                    <div class="categoria-overlay">
+                        <div class="produto-image"><img src="Media/Tendencia.jpg" alt="Tendencia"></div>
+                        <h3>Tendência</h3>
+                        <p>Para quem não segue rótulos</p>
+                        <a href="HTML/produtos.html" class="btn-categoria">Ver Coleção</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIFERENCIAIS -->
+        <section class="destaques">
+            <div class="secao-cabecalho">
+                <span class="secao-label">Diferenciais</span>
+                <h2>Por Que Nos Escolher</h2>
+            </div>
+            <div class="destaques-grid">
+                <div class="destaque-card">
+                    <div class="destaque-icone">&#10022;</div>
+                    <h3>Produtos Originais</h3>
+                    <p>Apenas distribuidores oficiais. Autenticidade garantida em cada frasco.</p>
+                </div>
+                <div class="destaque-card">
+                    <div class="destaque-icone">&#9786;</div>
+                    <h3>Atendimento Personalizado</h3>
+                    <p>A nossa equipa ajuda-o a encontrar a fragrância perfeita para cada ocasião.</p>
+                </div>
+                <div class="destaque-card">
+                    <div class="destaque-icone">&#10003;</div>
+                    <h3>Entrega Segura</h3>
+                    <p>Embalagens cuidadosas para que o seu perfume chegue em perfeitas condições.</p>
+                </div>
+                <div class="destaque-card">
+                    <div class="destaque-icone">&#9733;</div>
+                    <h3>Marcas Premium</h3>
+                    <p>Chanel, Tom Ford, Dior e mais de 50 marcas internacionais à sua escolha.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEPOIMENTOS (resumido — 2 de 6) -->
+        <section class="depoimentos">
+            <div class="secao-cabecalho">
+                <span class="secao-label">Depoimentos</span>
+                <h2>O Que Dizem os Nossos Clientes</h2>
+            </div>
+            <div class="depoimentos-grid depoimentos-preview">
+                <div class="depoimento-card">
+                    <div class="depoimento-estrelas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="depoimento-texto">"O Chanel que comprei chegou perfeitamente embalado e é 100% original. Já fiz três compras e a qualidade é sempre impecável."</p>
+                    <div class="depoimento-autor">
+                        <div class="depoimento-avatar">A</div>
+                        <div><strong>Ana Ferreira</strong><span>Luanda, Angola</span></div>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <div class="depoimento-estrelas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="depoimento-texto">"O Tom Ford que comprei é incrível. Recebo elogios sempre que o uso. Atendimento excelente e preços justos para a qualidade."</p>
+                    <div class="depoimento-autor">
+                        <div class="depoimento-avatar">C</div>
+                        <div><strong>Carlos Mendes</strong><span>Luanda, Angola</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="ver-mais-wrapper">
+                <a href="HTML/depoimentos.html" class="btn-contorno">Ver Todos os Depoimentos</a>
+            </div>
+        </section>
+
+        <!-- NEWSLETTER -->
+        <section class="newsletter">
+            <div class="newsletter-conteudo">
+                <span class="secao-label newsletter-label">Fique Por Dentro</span>
+                <h2>Receba as Nossas Novidades</h2>
+                <p>Subscreva e seja o primeiro a saber sobre novas fragrâncias, promoções exclusivas e eventos especiais.</p>
+                <form class="newsletter-form">
+                    <input type="email" id="email" class="form-input" placeholder="o_seu@email.com">
+                    <button type="submit">Subscrever</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- CONTACTOS (resumido) -->
+        <section class="contactos">
+            <div class="secao-cabecalho">
+                <span class="secao-label">Fale Connosco</span>
+                <h2>Contactos</h2>
+            </div>
+            <div class="contactos-grid">
+                <div class="contacto-card">
+                    <div class="contacto-icone">&#9742;</div>
+                    <h3>Telefone</h3>
+                    <p>+244 923 456 789</p>
+                </div>
+                <div class="contacto-card">
+                    <div class="contacto-icone">&#9993;</div>
+                    <h3>Email</h3>
+                    <p>geral@essenciasaromas.ao</p>
+                </div>
+                <div class="contacto-card">
+                    <div class="contacto-icone">&#9679;</div>
+                    <h3>Localização</h3>
+                    <p>Rua Che Guevara, 45 — Luanda</p>
+                </div>
+                <div class="contacto-card">
+                    <div class="contacto-icone">&#9200;</div>
+                    <h3>Horário</h3>
+                    <p>Seg – Sex: 08h – 18h</p>
+                </div>
+            </div>
+            <div class="ver-mais-wrapper">
+                <a href="HTML/contactos.html" class="btn-primario">Fale Connosco</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-conteudo">
+            <div class="footer-marca">
+                <a href="index.html" class="logo"><span>e</span>ssências &amp; aromas</a>
+                <p>Fragrâncias exclusivas que definem momentos inesquecíveis. Qualidade e elegância ao seu alcance.</p>
+                <br>
+                <div class="redes-sociais">
+                    <a href="https://instagram.com/nasi_comercial" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/Nasi_Comercial" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://wa.me/244951223468?text=Olá!%20Gostaria%20de%20mais%20informações." target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="https://x.com" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="HTML/sobre.html">Sobre Nós</a></li>
+                    <li><a href="HTML/produtos.html">Produtos</a></li>
+                    <li><a href="HTML/portfolio.html">Portefólio</a></li>
+                    <li><a href="HTML/contactos.html">Contactos</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Informações</h4>
+                <ul>
+                    <li><a href="HTML/depoimentos.html">Depoimentos</a></li>
+                    <li><a href="HTML/blog.html">Blog</a></li>
+                    <li><a href="HTML/faq.html">Perguntas Frequentes</a></li>
+                    <li><a href="HTML/newsletter.html">Newsletter</a></li>
+                    <li><a href="HTML/politica-privacidade.html">Política e Privacidade</a></li>
+                    <li><a href="HTML/termos-condicoes.html">Termos e Condições</a></li>
+                    <li><a href="HTML/mapa-do-site.html">Mapa do Site</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>&copy; 2026 Essências &amp; Aromas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <button id="btn-topo" onclick="voltarTopo()">&#8679;</button>
+
+    <div id="janela-carrinho" class="modal-carrinho">
+        <div class="conteudo-carrinho">
+            <span id="fechar-carrinho" class="botao-fechar">&times;</span>
+            <h2>Seu Carrinho</h2>
+            <div id="itens-do-carrinho">
+                <p style="color: #666; text-align: center;">O carrinho está vazio.</p>
+            </div>
+            <div class="total-carrinho">
+                <strong>Total: <span id="preco-total">0,00 Kz</span></strong>
+            </div>
+            <button id="btn-finalizar-compra" class="btn-finalizar">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <div id="modal-checkout" class="modal-checkout oculto">
+        <div class="checkout-conteudo">
+            <button class="fechar-checkout" onclick="fecharCheckout()">&times;</button>
+            <h2>Finalizar Compra</h2>
+
+            <div class="metodos-pagamento">
+            <button class="tab-pagamento ativo" data-metodo="cartao">Cartão</button>
+            <button class="tab-pagamento" data-metodo="multicaixa">Multicaixa Express</button>
+        </div>
+
+        <form id="form-cartao" class="form-pagamento">
+        <label for="nome-cartao">Nome no cartão</label>
+        <input type="text" id="nome-cartao" placeholder="Ex: Naomi Silva" required>
+
+        <label for="numero-cartao">Número do cartão</label>
+        <input type="text" id="numero-cartao" placeholder="0000 0000 0000 0000" maxlength="19" required>
+
+        <div class="linha-dupla">
+            <div>
+            <label for="validade-cartao">Validade</label>
+            <input type="text" id="validade-cartao" placeholder="MM/AA" maxlength="5" required>
+            </div>
+            <div>
+            <label for="cvv-cartao">CVV</label>
+            <input type="text" id="cvv-cartao" placeholder="123" maxlength="3" required>
+            </div>
+        </div>
+
+        <button type="submit" class="botao-pagar">Pagar Agora</button>
+        </form>
+
+        <form id="form-multicaixa" class="form-pagamento oculto">
+        <label for="numero-telefone">Número de telefone</label>
+        <input type="text" id="numero-telefone" placeholder="9XX XXX XXX" required>
+        <p class="aviso-simulacao">Vai receber um pedido de confirmação no telemóvel.</p>
+        <button type="submit" class="botao-pagar">Confirmar Pagamento</button>
+        </form>
+
+        <p class="aviso-simulacao rodape">⚠️ Simulação apenas — nenhum pagamento real é processado.</p>
+        </div>
+    </div>
+
+    <script src="JS/menu-responsivo.js"></script>
+    <script src="JS/jquery-4.0.0.min.js"></script>
+    <script src="JS/botao-topo.js"></script>
+    <script src="JS/modo-escuro-claro.js"></script>
+    <script src="JS/carrossel.js"></script>
+    <script src="JS/newsletter.js"></script>
+    <script src="JS/carrinho.js"></script>
+    <script src="JS/pagamento.js"></script>
+</body>
+</html>

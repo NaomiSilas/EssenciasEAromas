@@ -1,0 +1,96 @@
+/* =====================================================
+   Essências & Aromas — Estilos da página de Contactos
+   Ficheiro: CSS/contactos.css
+===================================================== */
+
+/* ── Popup de erro de validação ── */
+#popup-erro
+{
+    display:          none;
+    position:         absolute;
+    align-items:      center;
+    gap:              0.5rem;
+    background-color: #fff0f0;
+    border:           1.5px solid red;
+    border-radius:    8px;
+    padding:          0.5rem 0.85rem;
+    font-size:        0.82rem;
+    color:            #c0392b;
+    box-shadow:       0 4px 16px rgba(0, 0, 0, 0.15);
+    z-index:          9999;
+    pointer-events:   none;
+    margin-bottom:    6px;
+}
+
+#popup-erro::after
+{
+    content:      "";
+    position:     absolute;
+    bottom:       -7px;
+    left:         1.5rem;
+    border-width: 7px 7px 0 7px;
+    border-style: solid;
+    border-color: red transparent transparent transparent;
+}
+
+#popup-erro i
+{
+    font-size:   0.95rem;
+    flex-shrink: 0;
+}
+
+/* Modo escuro */
+[data-theme="dark"] #popup-erro
+{
+    background-color: #2a1010;
+    border-color:     #e74c3c;
+    color:            #ff8a80;
+}
+
+[data-theme="dark"] #popup-erro::after
+{
+    border-color: #e74c3c transparent transparent transparent;
+}
+
+
+/* ── Mensagem de sucesso ── */
+.msg-sucesso-contacto
+{
+    display:          flex;
+    flex-direction:   column;
+    align-items:      center;
+    justify-content:  center;
+    text-align:       center;
+    gap:              0.75rem;
+    padding:          3rem 2rem;
+    background-color: #f0faf4;
+    border:           2px solid #27ae60;
+    border-radius:    18px;
+    max-width:        520px;
+    margin:           0 auto;
+}
+
+[data-theme="dark"] .msg-sucesso-contacto
+{
+    background-color: #0f2a1a;
+    border-color:     #27ae60;
+}
+
+.msg-sucesso-contacto i
+{
+    font-size: 3rem;
+    color:     #27ae60;
+}
+
+.msg-sucesso-contacto strong
+{
+    font-size: 1.3rem;
+    color:     var(--texto-escuro);
+}
+
+.msg-sucesso-contacto p
+{
+    color:     var(--texto-medio);
+    font-size: 0.95rem;
+    margin:    0;
+}

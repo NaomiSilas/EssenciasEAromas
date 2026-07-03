@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>!function(){var t=localStorage.getItem('ea-theme')||( window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);var s=document.createElement('style');s.id='__nt';s.textContent='*,*::before,*::after{transition:none!important}';document.head.appendChild(s);window.addEventListener('load',function(){var e=document.getElementById('__nt');e&&e.parentNode.removeChild(e)})}();</script>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/modo-escuro-claro.css">
+    <link rel="stylesheet" href="../CSS/newsletter.css">
+    <link rel="stylesheet" href="../CSS/carrinho.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Newsletter | Essências &amp; Aromas</title>
+</head>
+<body>
+
+    <header>
+        <div class="topbar">
+            <a href="../index.html" class="logo"><span>e</span>ssências &amp; aromas</a>
+        </div>
+        <button id="btn-menu-mobile" class="btn-menu-mobile" aria-label="Abrir menu">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="navbar" id="navbar-menu">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="portfolio.html">Portefólio</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
+            </ul>
+            <div class="carrinho-menu">
+                <button id="btn-carrinho-topo">🛒<span id="contador-carrinho">0</span></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="pagina-hero">
+            <div class="pagina-hero-conteudo">
+                <div class="pagina-breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span>/</span>
+                    <span>Newsletter</span>
+                </div>
+                <h1>Newsletter</h1>
+                <p>Subscreva e receba novidades, promoções e dicas exclusivas</p>
+            </div>
+        </section>
+
+        <section class="newsletter-pagina-secao">
+            <div class="secao-cabecalho">
+                <span class="secao-label">Cadastro Gratuito</span>
+                <h2>Fique Sempre Informado</h2>
+                <p class="secao-desc">Junte-se a mais de 500 subscritores e receba conteúdo exclusivo directamente no seu email</p>
+            </div>
+
+            <div class="newsletter-pagina-grid">
+
+                <div class="newsletter-pagina-info">
+                    <span class="secao-label">O que vai receber</span>
+                    <h2>Conteúdo Pensado Para Si</h2>
+                    <p>A nossa newsletter é mais do que uma lista de promoções. É um espaço pensado para quem aprecia o universo das fragrâncias — com informação de valor, histórias das marcas e acesso antecipado às nossas novidades.</p>
+                    <p>Enviamos no máximo 2 emails por mês. Sem spam, sem ruído. Apenas o que realmente importa.</p>
+                    <ul class="newsletter-beneficios">
+                        <li>Acesso antecipado a novos produtos antes do lançamento oficial</li>
+                        <li>Promoções e descontos exclusivos apenas para subscritores</li>
+                        <li>Artigos e guias sobre como escolher e cuidar dos seus perfumes</li>
+                        <li>Dicas de parfumerie das nossas consultoras especializadas</li>
+                        <li>Convites para eventos e lançamentos na nossa loja</li>
+                        <li>Cancelamento a qualquer momento, sem qualquer custo</li>
+                    </ul>
+                </div>
+
+                <form class="newsletter-pagina-form">
+
+                    <div class="form-grupo-duplo">
+                        <!-- NOME -->
+                        <div class="form-grupo">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" class="form-input" placeholder="O seu nome">
+                        </div>
+                        <!-- APELIDO -->
+                        <div class="form-grupo">
+                            <label for="apelido">Apelido</label>
+                            <input type="text" id="apelido" class="form-input" placeholder="O seu apelido">
+                        </div>
+                    </div>
+
+                    <!-- EMAIL -->
+                    <div class="form-grupo">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-input" placeholder="o_seu@email.com">
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="telefone">Telefone (opcional)</label>
+                        <input type="tel" id="telefone" class="form-input" placeholder="+244 9XX XXX XXX">
+                    </div>
+
+                    <div class="form-grupo">
+                        <label>Interesses (escolha um ou mais)</label>
+                        <div class="form-checkgroup">
+                            <label class="form-check-label">
+                                <input type="checkbox" name="interesse" value="feminino"> Feminino
+                            </label>
+                            <label class="form-check-label">
+                                <input type="checkbox" name="interesse" value="masculino"> Masculino
+                            </label>
+                            <label class="form-check-label">
+                                <input type="checkbox" name="interesse" value="unissex"> Unissex
+                            </label>
+                            <label class="form-check-label">
+                                <input type="checkbox" name="interesse" value="novidades"> Novidades
+                            </label>
+                            <label class="form-check-label">
+                                <input type="checkbox" name="interesse" value="promocoes"> Promoções
+                            </label>
+                            <label class="form-check-label">
+                                <input type="checkbox" name="interesse" value="blog"> Artigos do Blog
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label class="form-check-label" style="border-radius: 10px; padding: 0.6rem 1rem;">
+                            <input type="checkbox" name="consentimento" id="consentimento">
+                            Concordo em receber comunicações da Essências &amp; Aromas e aceito a
+                            <a href="politica-privacidade.html" style="color: var(--rosa-escuro);">Política de Privacidade</a>
+                        </label>
+                        <span id="valid-consentimento" class="msg-erro" style="color: red; text-align: end;"></span>
+                    </div>
+
+                    <button type="button" class="btn-form" onclick="leitura()">Subscrever Gratuitamente</button>
+
+                    <p style="font-size: 0.78rem; color: var(--texto-medio); margin: 0; text-align: center;">
+                        Pode cancelar a subscrição a qualquer momento através do link em qualquer email recebido.
+                    </p>
+
+                </form>
+
+            </div>
+        </section>
+
+        <section class="depoimentos" style="background-color: var(--fundo-suave);">
+            <div class="secao-cabecalho">
+                <span class="secao-label">Subscritores</span>
+                <h2>O Que Dizem os Nossos Subscritores</h2>
+            </div>
+            <div class="depoimentos-grid depoimentos-preview">
+                <div class="depoimento-card">
+                    <div class="depoimento-estrelas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="depoimento-texto">"A newsletter da Essências &amp; Aromas é sempre uma leitura agradável. Aprendo sempre algo novo sobre perfumes e as promoções exclusivas já me fizeram poupar bastante!"</p>
+                    <div class="depoimento-autor">
+                        <div class="depoimento-avatar">J</div>
+                        <div><strong>Joana Cardoso</strong><span>Subscritora desde 2023</span></div>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <div class="depoimento-estrelas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="depoimento-texto">"Foi através da newsletter que fiquei a saber do lançamento do novo Tom Ford antes de toda a gente. Comprei imediatamente. Recomendo a subscrição a todos!"</p>
+                    <div class="depoimento-autor">
+                        <div class="depoimento-avatar">B</div>
+                        <div><strong>Bruno Leal</strong><span>Subscritor desde 2022</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-conteudo">
+            <div class="footer-marca">
+                <a href="../index.html" class="logo"><span>e</span>ssências &amp; aromas</a>
+                <p>Fragrâncias exclusivas que definem momentos inesquecíveis. Qualidade e elegância ao seu alcance.</p>
+                <br>
+                  <div class="redes-sociais">
+                    <a href="https://instagram.com/nasi_comercial" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/Nasi_Comercial" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://wa.me/244951223468?text=Olá!%20Gostaria%20de%20mais%20informações." target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="https://x.com" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="portfolio.html">Portefólio</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Informações</h4>
+                <ul>
+                    <li><a href="depoimentos.html">Depoimentos</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="faq.html">Perguntas Frequentes</a></li>
+                    <li><a href="newsletter.html">Newsletter</a></li>
+                    <li><a href="politica-privacidade.html">Política e Privacidade</a></li>
+                    <li><a href="termos-condicoes.html">Termos e Condições</a></li>
+                    <li><a href="mapa-do-site.html">Mapa do Site</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copy">
+            <p>&copy; 2026 Essências &amp; Aromas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <button id="btn-topo" onclick="voltarTopo()">&#8679;</button>
+
+    <div id="janela-carrinho" class="modal-carrinho">
+        <div class="conteudo-carrinho">
+            <span id="fechar-carrinho" class="botao-fechar">&times;</span>
+            <h2>Seu Carrinho</h2>
+            <div id="itens-do-carrinho">
+                <p style="color: #666; text-align: center;">O carrinho está vazio.</p>
+            </div>
+            <div class="total-carrinho">
+                <strong>Total: <span id="preco-total">0,00 Kz</span></strong>
+            </div>
+            <button id="btn-finalizar-compra" class="btn-finalizar">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <div id="modal-checkout" class="modal-checkout oculto">
+        <div class="checkout-conteudo">
+            <button class="fechar-checkout" onclick="fecharCheckout()">&times;</button>
+            <h2>Finalizar Compra</h2>
+
+            <div class="metodos-pagamento">
+            <button class="tab-pagamento ativo" data-metodo="cartao">Cartão</button>
+            <button class="tab-pagamento" data-metodo="multicaixa">Multicaixa Express</button>
+        </div>
+
+        <form id="form-cartao" class="form-pagamento">
+        <label for="nome-cartao">Nome no cartão</label>
+        <input type="text" id="nome-cartao" placeholder="Ex: Naomi Silva" required>
+
+        <label for="numero-cartao">Número do cartão</label>
+        <input type="text" id="numero-cartao" placeholder="0000 0000 0000 0000" maxlength="19" required>
+
+        <div class="linha-dupla">
+            <div>
+            <label for="validade-cartao">Validade</label>
+            <input type="text" id="validade-cartao" placeholder="MM/AA" maxlength="5" required>
+            </div>
+            <div>
+            <label for="cvv-cartao">CVV</label>
+            <input type="text" id="cvv-cartao" placeholder="123" maxlength="3" required>
+            </div>
+        </div>
+
+        <button type="submit" class="botao-pagar">Pagar Agora</button>
+        </form>
+
+        <form id="form-multicaixa" class="form-pagamento oculto">
+        <label for="numero-telefone">Número de telefone</label>
+        <input type="text" id="numero-telefone" placeholder="9XX XXX XXX" required>
+        <p class="aviso-simulacao">Vai receber um pedido de confirmação no telemóvel.</p>
+        <button type="submit" class="botao-pagar">Confirmar Pagamento</button>
+        </form>
+
+        <p class="aviso-simulacao rodape">⚠️ Simulação apenas — nenhum pagamento real é processado.</p>
+        </div>
+    </div>
+
+    <script src="../JS/menu-responsivo.js"></script>
+    <script src="../JS/jquery-4.0.0.min.js"></script>
+    <script src="../JS/newsletter.js"></script>
+    <script src="../JS/botao-topo.js"></script>
+    <script src="../JS/modo-escuro-claro.js"></script>
+    <script src="../JS/carrinho.js"></script>
+    <script src="../JS/pagamento.js"></script>
+</body>
+</html>

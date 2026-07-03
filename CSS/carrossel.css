@@ -1,0 +1,284 @@
+:root{    
+    --rosa-claro:   rgb(187, 104, 177);
+}
+
+/* ---------- Estrutura base ---------- */
+.carrossel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background: #111;
+}
+
+/* Todos os slides: absolute, sobrepostos */
+.carrossel-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    pointer-events: none;
+}
+
+.carrossel-slide.ativo {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ---------- Hero Carrossel (index) ---------- */
+.hero-carrossel {
+    height: 92vh;
+    min-height: 520px;
+    max-height: 860px;
+}
+
+.hero-carrossel .carrossel-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-carrossel .slide-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transform: scale(1.04);
+    transition: transform 6s ease;
+}
+
+.hero-carrossel .carrossel-slide.ativo .slide-bg {
+    transform: scale(1);
+}
+
+/* Modo claro */
+[data-theme="light"] .hero-carrossel .slide-overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.5) 0%,
+        rgba(0,0,0,0.20) 60%,
+        rgba(0,0,0,0.35) 100%
+    );
+}
+
+/* Modo escuro */
+[data-theme="dark"] .hero-carrossel .slide-overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.18) 0%,
+        rgba(0,0,0,0.48) 60%,
+        rgba(0,0,0,0.72) 100%
+    );
+}
+
+.hero-carrossel .slide-conteudo {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 0 1.5rem;
+    max-width: 720px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.hero-carrossel .slide-conteudo h1 {
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    font-weight: 700;
+    margin: 0 0 0.75rem;
+    line-height: 1.15;
+    color: white;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+
+}
+
+.hero-carrossel .slide-conteudo p {
+    font-size: clamp(0.95rem, 2vw, 1.15rem);
+    color: rgba(255,255,255,0.82);
+    margin: 0 0 2rem;
+    line-height: 1.6;
+}
+
+.hero-carrossel .slide-conteudo a {
+    display: inline-block;
+    margin-top: 6rem; /* aumenta para 1.5rem ou 2rem se quiseres mais baixo */
+    padding: 0.8rem 2.2rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1.5px solid #fff;
+    color: #fff;
+    transition: background 0.25s, color 0.25s;
+}
+
+.hero-carrossel .slide-conteudo a:hover {
+    background: #fff;
+    color: #111;
+}
+
+/* ---------- Portefólio Carrossel ---------- */
+.portfolio-carrossel {
+    height: 520px;
+    margin: 0 0 3rem;
+}
+
+.portfolio-carrossel .carrossel-slide {
+    display: block;
+}
+
+.portfolio-carrossel .slide-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center 35%;
+    background-repeat: no-repeat;
+}
+
+.portfolio-carrossel .slide-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        160deg,
+        rgba(0,0,0,0.05) 0%,
+        rgba(0,0,0,0.55) 100%
+    );
+    display: flex;
+    align-items: flex-end;
+    padding: 2.5rem 3rem;
+}
+
+.portfolio-carrossel .slide-legenda {
+    color: #fff;
+}
+
+.portfolio-carrossel .slide-legenda span {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #d4af7a;
+    margin-bottom: 0.4rem;
+}
+
+.portfolio-carrossel .slide-legenda h2 {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    margin: 0 0 0.3rem;
+    color: #fff;
+}
+
+.portfolio-carrossel .slide-legenda p {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.75);
+    margin: 0;
+}
+
+/* ---------- Controlos — botões REDONDOS ---------- */
+.carrossel-prev,
+.carrossel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(6px);
+    border: 1.5px solid rgba(255,255,255,0.35);
+    color: #fff;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+    line-height: 1;
+}
+
+.carrossel-prev:hover,
+.carrossel-next:hover {
+    background: rgba(255,255,255,0.32);
+    border-color: rgba(255,255,255,0.6);
+}
+
+.carrossel-prev { left: 1.25rem; }
+.carrossel-next { right: 1.25rem; }
+
+/* ---------- Dots ---------- */
+.carrossel-dots {
+    position: absolute;
+    bottom: 1.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.carrossel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255,255,255,0.6);
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.25s, border-color 0.25s, width 0.25s;
+}
+
+.carrossel-dot.ativo {
+    background: #fff;
+    border-color: #fff;
+    width: 24px;
+    border-radius: 4px;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 768px) {
+    .hero-carrossel {
+        height: 85vh;
+        min-height: 440px;
+    }
+
+    .portfolio-carrossel {
+        height: 340px;
+    }
+
+    .portfolio-carrossel .slide-overlay {
+        padding: 1.5rem;
+    }
+
+    .carrossel-prev,
+    .carrossel-next {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-carrossel {
+        height: 78vh;
+        min-height: 380px;
+    }
+
+    .portfolio-carrossel {
+        height: 240px;
+    }
+
+    .carrossel-prev,
+    .carrossel-next {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+}
