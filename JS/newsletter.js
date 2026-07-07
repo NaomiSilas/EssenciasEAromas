@@ -50,6 +50,30 @@ function validarConsentimento()
 }
 
 
+// ── Validação do reCAPTCHA ──────────────────────────────────────
+function validarRecaptcha()
+{
+    let widget = document.querySelector(".g-recaptcha");
+
+    // Se esta página não tiver reCAPTCHA, considera válido
+    if (!widget) return true;
+
+    let spanErro = document.getElementById("valid-recaptcha");
+    let resposta = typeof grecaptcha !== "undefined" ? grecaptcha.getResponse() : "";
+
+    if (!resposta || resposta.length === 0)
+    {
+        if (spanErro) spanErro.innerHTML = "Confirme que não é um robô";
+        return false;
+    }
+    else
+    {
+        if (spanErro) spanErro.innerHTML = "";
+        return true;
+    }
+}
+
+
 // ── Validações dos campos ─────────────────────────────────────
 function validarNome()
 {
@@ -166,6 +190,12 @@ function limparFormulario()
         checkbox.checked = false;
     });
 
+    // Reinicia o reCAPTCHA para poder ser usado novamente
+    if (typeof grecaptcha !== "undefined" && document.querySelector(".g-recaptcha"))
+    {
+        grecaptcha.reset();
+    }
+
     consentimentoJaValidado = false;
 }
 
@@ -180,15 +210,16 @@ function leitura()
     let apelidoOk       = validarApelido();
     let emailOk         = validarEmail();
     let consentimentoOk = validarConsentimento();
+    let recaptchaOk     = validarRecaptcha();
 
-    if (nomeOk && apelidoOk && emailOk && consentimentoOk)
+    if (nomeOk && apelidoOk && emailOk && consentimentoOk && recaptchaOk)
     {
         esconderPopup();
         alert("Subscrição realizada com sucesso!");
         limparFormulario();
     }
 
-    return (nomeOk && apelidoOk && emailOk && consentimentoOk);
+    return (nomeOk && apelidoOk && emailOk && consentimentoOk && recaptchaOk);
 }
 
 

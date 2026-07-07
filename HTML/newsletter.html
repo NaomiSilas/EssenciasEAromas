@@ -13,6 +13,8 @@
 
         gtag('config', 'G-0QW9LWM2E4');
     </script>
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/modo-escuro-claro.css">
     <link rel="stylesheet" href="../CSS/newsletter.css">
@@ -139,6 +141,11 @@
                             <a href="politica-privacidade.html" style="color: var(--rosa-escuro);">Política de Privacidade</a>
                         </label>
                         <span id="valid-consentimento" class="msg-erro" style="color: red; text-align: end;"></span>
+                    </div>
+
+                    <div class="form-grupo">
+                        <div class="g-recaptcha" data-sitekey="6Le6OkktAAAAADwI5FSkKU7QUMeRG6CcHLWMalnK"></div>
+                        <span id="valid-recaptcha" class="msg-erro" style="color: red; text-align: end;"></span>
                     </div>
 
                     <button type="button" class="btn-form" onclick="leitura()">Subscrever Gratuitamente</button>
