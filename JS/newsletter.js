@@ -29,16 +29,22 @@ var consentimentoJaValidado = false;
 
 function validarConsentimento()
 {
-    let consentimento = document.getElementById("consentimento").checked;
+    let campo = document.getElementById("consentimento");
+
+    // Se esta página não tiver campo de consentimento, considera válido
+    if (!campo) return true;
+
+    let consentimento = campo.checked;
+    let spanErro = document.getElementById("valid-consentimento");
 
     if (!consentimento)
     {
-        document.getElementById("valid-consentimento").innerHTML = "Deve concordar com os termos para subscrever";
+        if (spanErro) spanErro.innerHTML = "Deve concordar com os termos para subscrever";
         return false;
     }
     else
     {
-        document.getElementById("valid-consentimento").innerHTML = "";
+        if (spanErro) spanErro.innerHTML = "";
         return true;
     }
 }
@@ -48,6 +54,10 @@ function validarConsentimento()
 function validarNome()
 {
     let campo = document.getElementById("nome");
+
+    // Se esta página não tiver campo de nome, considera válido
+    if (!campo) return true;
+
     let nome = campo.value.trim();
     let palavrasNome = nome.split(/\s+/);
     let regexNome = /^[A-Za-zÀ-ÿ]+$/;
@@ -77,6 +87,10 @@ function validarNome()
 function validarApelido()
 {
     let campo = document.getElementById("apelido");
+
+    // Se esta página não tiver campo de apelido, considera válido
+    if (!campo) return true;
+
     let apelido = campo.value.trim();
     let palavrasApelido = apelido.split(/\s+/);
     let regexApelido = /^[A-Za-zÀ-ÿ]+$/;
@@ -106,6 +120,10 @@ function validarApelido()
 function validarEmail()
 {
     let campo = document.getElementById("email");
+
+    // Se por algum motivo não existir campo de email, considera válido
+    if (!campo) return true;
+
     let email = campo.value.trim();
     let regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -127,6 +145,31 @@ function validarEmail()
 }
 
 
+// ── Limpeza do formulário após sucesso ─────────────────────────
+function limparFormulario()
+{
+    var campoNome = document.getElementById("nome");
+    var campoApelido = document.getElementById("apelido");
+    var campoEmail = document.getElementById("email");
+    var campoTelefone = document.getElementById("telefone");
+    var campoConsentimento = document.getElementById("consentimento");
+    var checkboxesInteresse = document.querySelectorAll('input[name="interesse"]');
+
+    if (campoNome) campoNome.value = "";
+    if (campoApelido) campoApelido.value = "";
+    if (campoEmail) campoEmail.value = "";
+    if (campoTelefone) campoTelefone.value = "";
+    if (campoConsentimento) campoConsentimento.checked = false;
+
+    checkboxesInteresse.forEach(function (checkbox)
+    {
+        checkbox.checked = false;
+    });
+
+    consentimentoJaValidado = false;
+}
+
+
 // ── Botão Subscrever ──────────────────────────────────────────
 function leitura()
 {
@@ -142,25 +185,48 @@ function leitura()
     {
         esconderPopup();
         alert("Subscrição realizada com sucesso!");
+        limparFormulario();
     }
+
+    return (nomeOk && apelidoOk && emailOk && consentimentoOk);
 }
 
 
 // ── Eventos ───────────────────────────────────────────────────
 document.addEventListener("DOMContentLoaded", function ()
 {
-    // Popup nos campos de texto enquanto digita
-    document.getElementById("nome").addEventListener("input", validarNome);
-    document.getElementById("apelido").addEventListener("input", validarApelido);
-    document.getElementById("email").addEventListener("input", validarEmail);
+    var campoNome = document.getElementById("nome");
+    var campoApelido = document.getElementById("apelido");
+    var campoEmail = document.getElementById("email");
+    var campoConsentimento = document.getElementById("consentimento");
+
+    // Popup nos campos de texto enquanto digita (só se existirem nesta página)
+    if (campoNome) campoNome.addEventListener("input", validarNome);
+    if (campoApelido) campoApelido.addEventListener("input", validarApelido);
+    if (campoEmail) campoEmail.addEventListener("input", validarEmail);
 
     // Span do consentimento — só reage após o utilizador ter clicado em Subscrever
-    document.getElementById("consentimento").addEventListener("change", function ()
+    if (campoConsentimento)
     {
-        if (consentimentoJaValidado)
+        campoConsentimento.addEventListener("change", function ()
         {
-            validarConsentimento();
-        }
+            if (consentimentoJaValidado)
+            {
+                validarConsentimento();
+            }
+        });
+    }
+
+    // Liga o envio de QUALQUER formulário de newsletter presente na página
+    // (funciona tanto no mini-formulário do index como no formulário completo da página newsletter.html)
+    var formsNewsletter = document.querySelectorAll(".newsletter-form, .newsletter-pagina-form, #form-newsletter");
+    formsNewsletter.forEach(function (form)
+    {
+        form.addEventListener("submit", function (e)
+        {
+            e.preventDefault();
+            leitura();
+        });
     });
 
     // Esconde o popup ao clicar fora dos campos de texto

@@ -1,5 +1,10 @@
 function abrirCheckout() {
   document.getElementById("modal-checkout").classList.remove("oculto");
+
+  const modalCarrinho = document.getElementById("janela-carrinho");
+  if (modalCarrinho) {
+    modalCarrinho.style.display = "none";
+  }
 }
 
 function fecharCheckout() {
