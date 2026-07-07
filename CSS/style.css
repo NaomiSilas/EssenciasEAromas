@@ -1650,7 +1650,7 @@ body.dark-mode .redes-sociais a { color: white; }
 .btn-menu-mobile.aberto span:nth-child(2) { opacity: 0; }
 .btn-menu-mobile.aberto span:nth-child(3) { transform: translateY(-8.5px) rotate(-45deg); }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     header {
         position: relative;
         flex-wrap: wrap;
