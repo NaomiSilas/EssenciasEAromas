@@ -51,3 +51,18 @@
 {
     border-color: #e74c3c transparent transparent transparent;
 }
+
+/* ===================================================
+   RECAPTCHA - RESPONSIVIDADE
+=================================================== */
+.g-recaptcha {
+    transform: scale(0.92);
+    transform-origin: left top;
+}
+
+@media (max-width: 480px) {
+    .g-recaptcha {
+        transform: scale(0.77);
+        transform-origin: left top;
+    }
+}
